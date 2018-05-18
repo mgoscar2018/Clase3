@@ -2,47 +2,97 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     tools:context="mx.com.jardinreal.clase3.MainActivity">
-
-    <TextView
-        android:id="@+id/display_text_view"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Team A"
-        android:gravity="center_horizontal"
-        android:padding="4dp"/>
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/display_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Equipo A"
+            android:gravity="center_horizontal"
+            android:padding="4dp"/>
 
-    <TextView
-        android:id="@+id/team_a_score"
-        android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/team_a_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:gravity="center_horizontal"
+            android:padding="4dp"/>
+
+        <Button
+            android:id="@+id/tresPuntos_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+3 puntos"
+            android:layout_margin="8dp"
+            android:onClick="sumarTresPuntos"/>
+
+        <Button
+            android:id="@+id/dosPuntos_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+2 puntos"
+            android:layout_margin="8dp"
+            android:onClick="sumarDosPuntos"/>
+
+        <Button
+            android:id="@+id/tiroLibre_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tiro libre"
+            android:layout_margin="8dp"
+            android:onClick="sumarUnPunto"/>
+    </LinearLayout>
+    <!-- Al colocar el mismo peso (1) y anchura en cero (0) el layout  se divide a la mitad -->
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="3"
-        android:gravity="center_horizontal"
-        android:padding="4dp"/>
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/display_text_viewB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Equipo B"
+            android:gravity="center_horizontal"
+            android:padding="4dp"/>
 
-    <Button
-        android:id="@+id/tresPuntos_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="+3 puntos"
-        android:layout_margin="8dp"
-        android:onClick="sumarTresPuntos"/>
+        <TextView
+            android:id="@+id/team_b_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="center_horizontal"
+            android:padding="4dp"/>
 
-    <Button
-        android:id="@+id/dosPuntos_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="+2 puntos"
-        android:layout_margin="8dp"
-        android:onClick="sumarDosPuntos"/>
+        <Button
+            android:id="@+id/tresPuntosB_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+3 puntos"
+            android:layout_margin="8dp"
+            android:onClick="sumarTresPuntosB"/>
 
-    <Button
-        android:id="@+id/tiroLibre_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tiro libre"
-        android:layout_margin="8dp"
-        android:onClick="sumarUnPunto"/>
+        <Button
+            android:id="@+id/dosPuntosB_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+2 puntos"
+            android:layout_margin="8dp"
+            android:onClick="sumarDosPuntosB"/>
 
+        <Button
+            android:id="@+id/tiroLibreB_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tiro libre"
+            android:layout_margin="8dp"
+            android:onClick="sumarUnPuntoB"/>
+    </LinearLayout>
 </LinearLayout>
