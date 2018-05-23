@@ -50,6 +50,15 @@ public class MainActivity extends AppCompatActivity {
         puntajeB += 1;
         displayForTeamB(puntajeB);
     }
+    /*
+     * Función para reiniciar los puntajes
+     */
+    public void reiniciarPuntaje(View v) {
+        puntajeA = 0;
+        puntajeB = 0;
+        displayForTeamA(puntajeA);
+        displayForTeamB(puntajeB);
+    }
 
     /**
      * Displays the given score for Team A.
